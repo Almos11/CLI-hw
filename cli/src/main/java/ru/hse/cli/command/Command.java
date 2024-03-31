@@ -27,6 +27,8 @@ public interface Command {
 			case "pwd" -> new PwdCommand();
 			case "wc" -> new WcCommand();
 			case "grep" -> new GrepCommand();
+			case "cd" -> new CdCommand();
+			case "ls" -> new LsCommand();
 			default -> new ExternalCommand();
 		};
 	}

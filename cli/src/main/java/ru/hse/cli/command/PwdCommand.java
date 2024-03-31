@@ -17,7 +17,7 @@ public class PwdCommand implements Command {
 
 	@Override
 	public Result invoke(List<String> args, InputStream in, OutputStream out) {
-		Path currentPath = Paths.get("");
+		Path currentPath = Paths.get(System.getProperty("user.dir"));
 		try {
 			out.write(currentPath.toAbsolutePath().toString().getBytes());
 			return new Result(Status.OK, 0, Optional.empty());
